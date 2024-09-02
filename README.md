@@ -21,9 +21,7 @@ Also, Wordpress admins can look up a user's numeric ID under Users and then clea
 
 Plugins > Add New > Upload Plugin > select Zip file > Install Now > Activate Plugin
 
-This plugin adds shortcodes to Wordpress named `user_feed_url` and `show_user_feed_url`.
-
-So, when installing this Plugin Wordpress, modify the locations in the Wordpress template where Newsfeed URLs exist, to include these shortcodes, such as in the following lines, so that the correct per-user newsfeed links are provided to each user:
+This plugin adds shortcodes to Wordpress named `user_feed_url` and `show_user_feed_url`.  When installing this Plugin Wordpress, modify the locations in the Wordpress template where Newsfeed URLs exist to include these shortcodes, such as in the following lines, so that the correct per-user newsfeed links are provided to each user:
 
 In our example, sidebar.php gets the following snippet:
 
@@ -50,7 +48,7 @@ There was an existing Wordpress plugin to "add tokens to newsfeeds for users to 
 
 However, that solution did not very well discourage leaking or sharing URLs for active users, **since the tokens look like random strings and could "work anywhere" in an RSS reader**.
 
-So, this solution discourages link-sharing or link-leaking by adding username to the user's "private newsfeed" token string.
+* So, this solution discourages link-sharing or link-leaking by adding username to the user's "private newsfeed" token string. *
 
 Note: It is acknowledged that "leaking username" to a "feed reader" or anywhere that URLs show up in cleartext may be undesireable as well in come contexts.  However, that is the tradeoff knowingly made in this solution.
 
