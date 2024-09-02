@@ -46,15 +46,15 @@ There was an existing Wordpress plugin to "add tokens to newsfeeds for users to 
 
 - That allowed users to subscribe to feeds in RSS readers, while still keeping the feeds private to members of the Wordpress site only, by giving each user a unique feed URL.
 
-- That allow private-only access, with disabled accounts getting access revoked for that user.
+- That allowed private-only access, with disabled accounts getting access revoked for that user.
 
-However, that solution does not very well discourage leaking or sharing URLs for active users, since the tokens look like random strings and could "work anywhere" in an RSS reader.
+However, that solution did not very well discourage leaking or sharing URLs for active users, **since the tokens look like random strings and could "work anywhere" in an RSS reader**.
 
-So, this solution discourages link-sharing or link-leaking, by adding username to the user's "private newsfeed" token string.
+So, this solution discourages link-sharing or link-leaking by adding username to the user's "private newsfeed" token string.
 
-It is acknowledged that "leaking username" to a "feed reader" or anywhere that URLs show up in cleartext may be undesireable as well in come contexts.  However, that is the tradeoff knowingly made in this solution.
+Note: It is acknowledged that "leaking username" to a "feed reader" or anywhere that URLs show up in cleartext may be undesireable as well in come contexts.  However, that is the tradeoff knowingly made in this solution.
 
-Thus, it is suggested to use these URLs where username is not secret, e.g. in feed readers that remain local to one's own device, etc. (which, admittedly, might be difficult for some users to tell without inspecting traffic, but that is outside the scope of this plugin).
+Thus, it is suggested to use these URLs where username is not too secret, e.g. in feed readers that remain local to one's own device, etc. (which, admittedly, might be difficult for some users to tell without inspecting traffic, but that is outside the scope of this plugin).
 
 # Authors
 
